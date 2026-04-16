@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Fajrul Fatih</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        display: ['Inter', 'sans-serif'],
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            from: { opacity: '0', transform: 'translateY(20px)' },
+                            to: { opacity: '1', transform: 'translateY(0)' },
+                        },
+                        fadeOut: {
+                            from: { opacity: '1', transform: 'translateY(0)' },
+                            to: { opacity: '0', transform: 'translateY(-20px)' },
+                        },
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards',
+                        'fade-out': 'fadeOut 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards',
+                    },
+                },
+            },
+        };
+    </script>
+</head>
+
+<body
+    class="font-display flex min-h-screen items-center justify-center overflow-x-hidden overflow-y-auto bg-gradient-to-br from-blue-900 via-blue-800 to-blue-600">
+    <main id="app" class="mx-auto w-full max-w-2xl px-5 py-10 text-center">
+        <h1 id="title" class="mb-6 animate-fade-in text-3xl font-bold text-white md:text-4xl">
+            Hai ?
+        </h1>
+        <p id="content" class="animate-fade-in text-base text-white/90 md:text-lg"></p>
+    </main>
+    <script src="dist/script.js" defer></script>
+</body>
+
+</html>
